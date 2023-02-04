@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Archivos que no debo compartir
-setup_dir.py
-data/
+#setup_dir.py
+#data/
