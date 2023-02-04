@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Archivos que no debo compartir
+setup_dir.py
+data/
