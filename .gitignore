@@ -134,7 +134,8 @@ nbg
 
 # QUIZ 
 q*.ipynb
-01_Introduccion/huevo_cocido.jpg 
+01_Introduccion/huevo_cocido.jpg
+02_DataScience/precios_producto.ipynb 
 .ans/
 .nbgex 
 assignments_creation.csv
