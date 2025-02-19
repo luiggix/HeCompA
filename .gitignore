@@ -129,14 +129,6 @@ dmypy.json
 .pyre/
 
 # Archivos que no debo compartir
-# NBGRADER 
-#nbg 
+Recursos/
+Temporal/
 
-# QUIZ 
-#q*.ipynb
-#01_Introduccion/huevo_cocido.jpg
-#.ans/
-#.nbgex 
-#assignments_creation.csv
-#assignments_update.csv
-#macti_nbg_qs.py
