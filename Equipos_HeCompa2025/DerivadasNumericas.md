@@ -9,10 +9,10 @@
 |---|---|---|
 | Diego Enrique Delgado Cancino|Johan Alexander Gómez Almanza|Norman Roberto Sánchez Rojano|
 | Jimena Pedroza Franco|Metztli Tamara  Guerrero Rodríguez|XIMENA SORAYA MANCILLA RUIZ|
-| Israel Eslí Lozano Pérez|Ana Cecilia Bardomiano Martínez|Scarlett Ariadna Ibarra Piñón|
+| Gabriela Abigail Ortega Ortega|Ana Cecilia Bardomiano Martínez|Scarlett Ariadna Ibarra Piñón|
 
 |Equipo 7|
 |---|
 | Karla Daniela Lopez Sanchez|
 | Valentina Ruiz Soto|
-| Gabriela Abigail Ortega Ortega|
+| Israel Eslí Lozano Pérez|
