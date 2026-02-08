@@ -129,6 +129,8 @@ dmypy.json
 .pyre/
 
 # Archivos que no debo compartir
-Recursos/
-Temporal/
-
+Algebra_Lineal_01/
+Interpolacion/
+SistemasTerrestres/
+Tutoriales/
+interactivo.ipynb
