@@ -103,11 +103,12 @@ def numericalDer(f, x0, h, aprox = 'All'):
     xl = np.linspace(x0 - 0.5 * np.pi, x0 + 0.5 * np.pi, 50)
     xv = np.linspace(x0 - np.pi, x0 + np.pi, 50)
     
-    # Coordenaas verticales de las líneas de cada aproximación
+    # Coordenadas verticales de las líneas de cada aproximación
     lf = line(xl, x0, x0 + h, evalf(x0), evalf(x0 + h))
     lb = line(xl, x0, x0 - h, evalf(x0), evalf(x0 - h))
     lc = line(xl, x0-h, x0+h, evalf(x0-h), evalf(x0+h))
-
+    le = evalfp(x0) * (xl-x0) + evalf(x0) # Línea de la derivada exacta
+    
     # Punto donde se aproxima y el punto vecino.
     yv = evalf(xv)
     yp = evalfp(xv)
@@ -120,7 +121,8 @@ def numericalDer(f, x0, h, aprox = 'All'):
     ax1 = plt.subplot(1,2,1)
     plt.plot(xv, yv, '--', lw = 3, color='b', label = 'f = {}'.format(f))
     plt.scatter(x0, evalf(x0), facecolor ='b', edgecolor='k', zorder=10)
-    
+    plt.plot(xl, le, lw = ancho_linea, color='r', label="f' = Exacta")
+
     if aprox == 'All':
         plt.scatter(x0+h, evalf(x0+h), facecolor ='w', edgecolor='k', zorder=10)
         plt.scatter(x0-h, evalf(x0-h), facecolor ='w', edgecolor='k', zorder=10)
@@ -142,8 +144,7 @@ def numericalDer(f, x0, h, aprox = 'All'):
         plt.scatter(x0-h, evalf(x0-h), facecolor ='w', edgecolor='k', zorder=10)
         plt.plot(xl, lc, lw = ancho_linea, label="f' = Centered")
         
-    plt.legend(ncol=2, loc=(0.0,-0.30))
-
+    plt.legend(ncol=3, loc=(0.0,-0.30))
 
     ax2 = plt.subplot(1,2,2)
     plt.plot(xv, yp, '--', lw = 3, color='k', label = "f'= {}".format(fp))
@@ -160,6 +161,12 @@ def numericalDer(f, x0, h, aprox = 'All'):
         plt.plot(xv, centeredFD(evalf, xv, h), lw = ancho_linea)
         
     plt.legend()
+
+    ax1.grid()
+    ax1.minorticks_on()
+
+    ax2.grid()
+    ax2.minorticks_on()
     
     plt.show()
     return [ef, eb, ec]
